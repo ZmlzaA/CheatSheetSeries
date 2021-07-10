@@ -17,7 +17,7 @@ CSP defends against XSS attacks in the following ways:
 By preventing the page from executing inline scripts, attacks like injecting
 
 ```html
-<script>alert("XSS)</script>
+<script>document.body.innerHTML='defaced'</script>
 ```
 
  will not work.
@@ -298,7 +298,7 @@ Content-Security-Policy: upgrade-insecure-requests;
 
 A strict policy's role is to protect against classical stored, reflected, and some of the DOM XSS attacks and should be the optimal goal of any team trying to implement CSP.
 
-Google went ahead and set up a [guide](https://csp.withgoogle.com/docs/strict-csp.html) to adopt a strict CSP based on nonces.
+Google went ahead and set up a [guide](https://web.dev/strict-csp) to adopt a strict CSP based on nonces.
 
 Based on a [presentation](https://speakerdeck.com/lweichselbaum/csp-a-successful-mess-between-hardening-and-mitigation?slide=55) at LocoMocoSec, the following two policies can be used to apply a strict policy:
 
@@ -349,7 +349,7 @@ document.getElementById("button1").addEventListener('click', doSomething);
 
 ## References
 
-- [CSP with Google](https://csp.withgoogle.com/docs/index.html)
+- [Strict CSP](https://web.dev/strict-csp)
 - [CSP Level 3 W3C](https://www.w3.org/TR/CSP3/)
 - [Content-Security-Policy](https://content-security-policy.com/)
 - [MDN CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)

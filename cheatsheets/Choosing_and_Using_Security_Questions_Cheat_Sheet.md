@@ -2,11 +2,9 @@
 
 ## Introduction
 
-Security questions are used by many websites to allow a user to regain access to their account if they have forgotten their password, or have lost their secondary authentication factors when multifactor authentication (MFA) is required. However, they are often a significantly weaker form of authentication than passwords, and there have been a number of high profile cases where they have allowed attackers to compromise users' accounts.
+**WARNING: Security questions are no longer recognized as an acceptable authentication factor per NIST SP 800-63. Account recovery is just an alternate way to authenticate so it should be no weaker than regular authentication. See SP 800-63B sec 5.1.1.2 paragraph 4: *Verifiers SHALL NOT prompt subscribers to use specific types of information (e.g., “What was the name of your first pet?”) when choosing memorized secrets*.**
 
-Security questions **should not be relied upon as a sole mechanism to authenticate a user**. However, they can provide a useful additional layer of security when [MFA](Multifactor_Authentication_Cheat_Sheet.md) is not available.
-
-This cheat sheet provides guidance on both how to choose strong security questions, and how to use them securely within an application.
+While there are no acceptable uses of security questions in secure software, this cheat sheet provides guidance on how to choose strong security questions for legacy purposes.
 
 ## Choosing Security Questions
 
@@ -52,7 +50,9 @@ Many good security questions are not applicable to all users, so the best approa
 
 The following list provides some examples of good questions:
 
-- What are the last four digits of your national insurance or social security number?
+- What is the name of a college you applied to but didn’t attend?
+- What was the name of the first school you remember attending?
+- Where was the destination of your most memorable school field trip?
 - What was your maths teacher's surname in your 8th year of school?
 - What was the name of your first stuffed toy?
 - What was your driving instructor's first name?
